@@ -1,0 +1,34 @@
+{
+  "namespace": "za.co.goldmine.kafka.streams.fitness_duplicate_detector.avro",
+  "name": "FitnessDuplicateEvent",
+  "doc": "Defines a value for a duplicate fitness event with a count",
+  "type": "record",
+  "fields": [
+    {
+      "default": null,
+      "name": "USERID",
+      "doc": "The simulated user who sent the fitness data",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "TENANT_ID",
+      "doc": "The simulated tenant id",
+      "type": [
+        "null",
+        "int"
+      ]
+    },
+    {
+      "name": "COUNT_DUPLICATES",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    }
+  ]
+}

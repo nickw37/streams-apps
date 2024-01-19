@@ -1,0 +1,139 @@
+{
+  "namespace": "za.co.goldmine.kafka.streams.fitness_duplicate_detector.avro",
+  "name": "FitnessEvent",
+  "doc": "Defines hypothetical Fitness Data",
+  "type": "record",
+  "fields": [
+    {
+      "name": "activityType",
+      "doc": "Summary of data",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [ "Walking", "Running", "Cycling", "Swimming"  ]
+        }
+      }
+    },
+    {
+      "name":"startTimeInSeconds",
+      "type":{
+        "type":"long",
+        "arg.properties":{
+          "range":{
+            "min":1487715775521,
+            "max":1519273364600
+          }
+        }
+      }
+    },
+    {
+      "name": "averageHeartRateInBeatsPerMinute",
+      "type":{
+        "type":"double",
+        "arg.properties":{
+          "range":{
+            "min":50,
+            "max":200
+          }
+        }
+      }
+    },
+    {
+      "name": "activeKilocalories",
+      "type":{
+        "type":"int",
+        "arg.properties":{
+          "range":{
+            "min":1,
+            "max":200
+          }
+        }
+      }
+    },
+    {
+      "name": "distanceInMeters",
+      "doc": "A simulated distance",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 10000
+          }
+        }
+      }
+    },
+    {
+      "name": "durationInSeconds",
+      "doc": "Simulated Time",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 10000
+          }
+        }
+      }
+    },
+    {
+      "name": "steps",
+      "doc": "A simulated number of steps",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 5,
+            "max": 100000
+          }
+        }
+      }
+    },
+    {
+      "name": "floorsClimbed",
+      "doc": "Simulated number of floors climbed",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 20
+          }
+        }
+      }
+    },
+    {
+      "name": "manufacturerName",
+      "doc": "Name of upload device",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [ "Garmin", "Fitbit", "Samsung", "Polar", "Apple" ]
+        }
+      }
+    },
+    {
+      "name": "userid",
+      "doc": "The simulated user who sent the fitness data",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "regex": "User_[1-9]{0,1}"
+        }
+      }
+    },
+    {
+      "name": "tenant_id",
+      "doc": "The simulated tenant id",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 20
+          }
+        }
+      }
+    }
+  ]
+}
